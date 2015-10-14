@@ -17,8 +17,8 @@ namespace cis237assignment3
         protected const decimal computerConnection_Cost = 300;
         protected const decimal arm_Cost = 250m;
 
-        protected const decimal allOptions=115+300+250;
-        protected const decimal noOptions = 0m;
+        //protected const decimal allOptions=115+300+250;
+        //protected const decimal noOptions = 0m;
 
         //Constructor
         public Utility(string Material, string Model, string Color,bool Toolbox, bool ComputerConnection,bool Arm):base(Material,Model,Color)
@@ -35,9 +35,22 @@ namespace cis237assignment3
         {
             return base.ToString() + "Toolbox: " + this.toolbox + " Computer Connection: " + this.computerConnection + " Arm: " + this.arm;
         }
-        public override void CalculateTotalCost()
+        public override void CalculateTotalCost()   //Calculates the cost of a utility droid based upon base cost and each feature added.
         {
-            totalCost=baseCost+()
+            if(toolbox)
+            {
+                totalCost += toolbox_Cost;
+            }
+            if(computerConnection)
+            {
+                totalCost += computerConnection_Cost;
+            }
+            if(arm)
+            {
+                totalCost += arm_Cost;
+            }
+            totalCost += baseCost;
+            
         }
     }
 }
