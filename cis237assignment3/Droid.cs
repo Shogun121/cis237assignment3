@@ -15,9 +15,11 @@ namespace cis237assignment3
         protected decimal totalCost;
 
         //Constructor
-        Droid(string material,string model,string color)
+        public Droid(string Material,string Model,string Color)
         {
-
+            this.material = Material;
+            this.model = Model;
+            this.color = Color;
         }
 
         //Properties
@@ -25,20 +27,20 @@ namespace cis237assignment3
         { 
             get
             {
-                return TotalCost;
+                return totalCost;
             } 
             set
             {
-                TotalCost = value;
+                totalCost = value;
             } 
         }
 
         //Methods
-        abstract void CalculateTotalCost();
+        protected virtual void CalculateTotalCost();
 
-        protected virtual override string ToString()   //access ToString method allowing sub classes to  alter as needed.
+        protected override string ToString()   //access ToString method allowing sub classes to  alter as needed.
         {
-            return base.ToString();
+            return "Material: "+this.material+Environment.NewLine + "Model: "+this.model+Environment.NewLine + "Color: "+this.color+Environment.NewLine;
         }
         protected virtual decimal CalculateBaseCost() //sets the base cost equal to the total cost.
         {

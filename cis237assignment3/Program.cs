@@ -10,6 +10,8 @@ namespace cis237assignment3
     {
         static void Main(string[] args)
         {
+            Protocol protocol = new Protocol("Titanium","New","Black",1200);
+            protocol.ToString();
         }
     }
 }
