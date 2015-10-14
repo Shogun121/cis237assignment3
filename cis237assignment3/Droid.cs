@@ -23,7 +23,7 @@ namespace cis237assignment3
         }
 
         //Properties
-        abstract decimal TotalCost 
+        public virtual decimal TotalCost 
         { 
             get
             {
@@ -36,11 +36,11 @@ namespace cis237assignment3
         }
 
         //Methods
-        protected virtual void CalculateTotalCost();
+        public abstract void CalculateTotalCost();
 
-        protected override string ToString()   //access ToString method allowing sub classes to  alter as needed.
+        public override string ToString()   //access ToString method allowing sub classes to  alter as needed.
         {
-            return "Material: "+this.material+Environment.NewLine + "Model: "+this.model+Environment.NewLine + "Color: "+this.color+Environment.NewLine;
+            return "Material: "+this.material + "Model: "+this.model + "Color: "+this.color;
         }
         protected virtual decimal CalculateBaseCost() //sets the base cost equal to the total cost.
         {

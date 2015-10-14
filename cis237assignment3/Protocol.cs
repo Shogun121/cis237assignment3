@@ -25,5 +25,9 @@ namespace cis237assignment3
         {
             return base.ToString()+"Base Cost: "+this.baseCost+Environment.NewLine;
         }
+        public override void CalculateTotalCost()
+        {
+            totalCost = baseCost * (cost_per_language * numberLanguage);
+        }
     }
 }
