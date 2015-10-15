@@ -9,11 +9,18 @@ namespace cis237assignment3
     class UI
     {
         //Backing fields
-
+        private bool exit=false;
         //Constructor
 
         //Properties
 
         //Methods
+        public void RunLoop()
+        {
+            while(exit==false)
+            {
+
+            }
+        }
     }
 }
